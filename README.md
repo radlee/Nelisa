@@ -4,23 +4,22 @@ Solving Nelisa's problem of wanting to be able to buy in bulk by helping her und
 
 ##Nelisa
 
+![](img/ProfileNelisa.png)
 * Role : Spaza Shop OWner
 * Duties : Buying the Stock
 * Lives : Khayelitsha
-![](img/ProfileNelisa.png)
 
 ##Xolani
 
+![](img/ProfileXolani.png)
 * Role : Manager
 * Duties : Sales
 * Lives : Khayelitsha
-![](img/ProfileXolani.png)
 
 ##Nthabiseng
 
+![](img/ProfileNthabiseng.png)
 * Role : Customer
 * Duties : Makes Purchases
 * Lives : Khayelitsha
-![](img/ProfileNthabiseng.png)
-
 
