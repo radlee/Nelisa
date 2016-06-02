@@ -1,6 +1,6 @@
-# Nelisa
+# Nelisa Spaza
 
-Solving Nelisa's problem of wanting to be able to buy in bulk by helping her understand what she needs to buy and how much of that. 
+Solving Nelisa's problem of wanting to be able to buy in bulk by helping her understand what she needs to buy and how much of that.
 
 ##Nelisa
 
@@ -23,3 +23,4 @@ Solving Nelisa's problem of wanting to be able to buy in bulk by helping her und
 * Duties : Makes Purchases
 * Lives : Khayelitsha
 
+![](img/t2.png)

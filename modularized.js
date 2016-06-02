@@ -17,6 +17,7 @@ var readAndMakeObject = function(file){
     }
     listOfObjs.push(result);
   })
+  console.log(listOfObjs);
   return listOfObjs;
 }
 var objArray = readAndMakeObject("files/week2.csv");
