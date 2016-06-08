@@ -16,42 +16,43 @@ var readAndMakeObject = function(file){
     }
     listOfObjs.push(result);
   });
-  console.log(listOfObjs);
+  // console.log(listOfObjs);
   return listOfObjs;
 }
-var objArray = readAndMakeObject("../files/week2.csv");
+var objArray = readAndMakeObject("files/week2.csv");
 
 var getMostSellingProduct = function (listOfObjs){
   var totalProducts = [];
   var totalObjs = {};
   listOfObjs.forEach(function(item){
     var Item = item.Item;
-    var number = item.NumberSold;
+    var Price = item.Price;
+    var totalCost = Price.replace(/R/g, "") * item.NumberSold;
     if(totalObjs[Item] == undefined){
       totalObjs[Item] = 0;
     }
-    totalObjs[Item] = totalObjs[Item] + number;
+    totalObjs[Item] = totalObjs[Item] + totalCost;
   });
   for(var key in totalObjs){
     var result = {
       Item : key,
-      NumberSold : totalObjs[key]
+      TotalCost: totalObjs[key]
     }
     totalProducts.push(result);
   }
   var sortTheArray = function(list){
     list.sort(function(obj1, obj2){
-      return obj1.NumberSold - obj2.NumberSold;
+      return obj1.TotalCost - obj2.TotalCost;
     });
   }
   sortTheArray(totalProducts)
-  console.log(totalProducts);
+  // console.log(totalProducts);
   return totalProducts;
 }
 
 var listOfItems = getMostSellingProduct(objArray);
 
-console.log("Start HERE");
+console.log("Start HERE-");
 console.log(listOfItems);
 
 var categories = [];
@@ -67,78 +68,78 @@ var totalBeauty =0;
 //Categorizing--------------------
 listOfItems.forEach(function(item){
   if(item.Item == "Bananas - loose"){
-    totalFruits += item.NumberSold
+    totalFruits += item.Price;
   }
   if(item.Item == "Apples - loose"){
-    totalFruits += item.NumberSold
+    totalFruits += item.Price;
   }
   if(item.Item == "Mixed Sweets 5s"){
-    totalCandy += item.NumberSold
+    totalCandy += item.Price;
   }
   if(item.Item == "Heart Chocolates"){
-    totalCandy += item.NumberSold
+    totalCandy += item.Price;
   }
   if(item.Item == "Coke 500ml"){
-    totalCoolDrinks += item.NumberSold
+    totalCoolDrinks += item.Price;
   }
   if(item.Item == "Fanta 500ml"){
-    totalCoolDrinks += item.NumberSold
+    totalCoolDrinks += item.Price;
   }
   if(item.Item == "Cream Soda 500ml"){
-    totalCoolDrinks += item.NumberSold
+    totalCoolDrinks += item.Price;
   }
   if(item.Item == "Imasi"){
-    totalDairy += item.NumberSold
+    totalDairy += item.Price;
   }
   if(item.Item == "Milk 1l"){
-    totalDairy += item.NumberSold
+    totalDairy += item.Price;
   }
   if(item.Item == "Gold Dish Vegetable Curry Can"){
-    totalCanned += item.NumberSold
+    totalCanned += item.Price;
   }
   if(item.Item == "Chakalaka Can"){
-    totalCanned += item.NumberSold
+    totalCanned += item.Price;
   }
   if(item.Item == "Valentine Cards"){
-    totalGifts += item.NumberSold
+    totalGifts += item.Price;
   }
   if(item.Item == "Rose (plastic)"){
-    totalGifts += item.NumberSold
+    totalGifts += item.Price;
   }
   if(item.Item == "Iwisa Pap 5kg"){
-    totalFood += item.NumberSold
+    totalFood += item.Price;
   }
   if(item.Item == "Top Class Soy Mince"){
-    totalFood += item.NumberSold
+    totalFood += item.Price;
   }
   if(item.Item == "Bread"){
-    totalBakery += item.NumberSold
+    totalBakery += item.Price;
   }
   if(item.Item == "Soap Bar"){
-    totalBeauty += item.NumberSold
+    totalBeauty += item.Price;
   }
   if(item.Item == "Shampoo 1 litre"){
-    totalBeauty += item.NumberSold
+    totalBeauty += item.Price;
   }
 })
-console.log("\n Categories --- ");
-var fuit = {Category : "Fruit", NumberSold : totalFruits};
+// console.log("\n Categories --- ");
+var fuit = {Category : "Fruit", Price : totalFruits};
 categories.push(fuit);
-var candy = {Category : "Candy", NumberSold : totalCandy}
+var candy = {Category : "Candy", Price : totalCandy}
 categories.push(candy);
-var drink = {Category : "CoolDrink", NumberSold : totalCoolDrinks}
+var drink = {Category : "CoolDrink", Price : totalCoolDrinks}
 categories.push(drink);
-var dairy = {Category : "Dairy", NumberSold : totalDairy}
+var dairy = {Category : "Dairy", Price : totalDairy}
 categories.push(dairy);
-var can = {Category : "Canned", NumberSold : totalCanned}
+var can = {Category : "Canned", Price : totalCanned}
 categories.push(can);
-var gift = {Category : "Gifts", NumberSold : totalGifts}
+var gift = {Category : "Gifts", Price : totalGifts}
 categories.push(gift);
-var food = {Category : "Food", NumberSold : totalFood}
+var food = {Category : "Food", Price : totalFood}
 categories.push(food);
-var bakery = {Category : "Bakery", NumberSold : totalBakery}
+var bakery = {Category : "Bakery", Price : totalBakery}
 categories.push(bakery);
-var beauty = {Category : "Beauty", NumberSold : totalBeauty}
+var beauty = {Category : "Beauty", Price : totalBeauty}
 categories.push(beauty);
 
 var sortTheArray = function(list){
@@ -147,7 +148,7 @@ var sortTheArray = function(list){
   })
 }
 sortTheArray(categories)
-console.log(categories)
-
-console.log("The Most porpular Category is " + categories[categories.length-1].Category);
-console.log("The Least porpular Category is " + categories[0].Category);
+// console.log(categories)
+//
+// console.log("The Most porpular Category is " + categories[categories.length-1].Category);
+// console.log("The Least porpular Category is " + categories[0].Category);

@@ -19,7 +19,7 @@ var readAndMakeObject = function(file){
   console.log(listOfObjs);
   return listOfObjs;
 }
-var listOfObj = readAndMakeObject("files/week3.csv");
+var listOfObj = readAndMakeObject("../files/week3.csv");
 
 
 var mostProf = function(list){
