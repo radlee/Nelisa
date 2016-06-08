@@ -60,5 +60,4 @@ var getMostSellingProduct = function (listOfObjs){
 
 getMostSellingProduct(objArray);
 
-
 // console.log(obj.Price.replace(/R/g, ""));

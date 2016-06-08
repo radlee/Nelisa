@@ -16,11 +16,11 @@ module.exports = function (listOfObjs){
     }
     totalProducts.push(result);
   }
-    var sortTheArray = function(list){
-      list.sort(function(obj1, obj2){
-        return obj1.NumberSold - obj2.NumberSold;
-      })
-    }
-    sortTheArray(totalProducts)
-    return "Least Popular Product is " + totalProducts[0].Item;
+  var sortTheArray = function(list){
+    list.sort(function(obj1, obj2){
+      return obj1.NumberSold - obj2.NumberSold;
+    })
+  }
+  sortTheArray(totalProducts)
+  return "Least Popular Product is " + totalProducts[0].Item;
 }
