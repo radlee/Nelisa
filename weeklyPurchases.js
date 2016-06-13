@@ -48,21 +48,21 @@ objArray.forEach(function(item){
       }
       weekl1Purchases.push(result)
     }
-    if(new Date(item.Date) < week2 && new Date(item.Date) > week1){
+    if(new Date(item.Date) < week2 && new Date(item.Date) >= week1){
       var result ={
         Item : item.Item,
         TotalCost : item.TotalCost
       }
       weekl2Purchases.push(result)
     }
-    if(new Date(item.Date) < week3 && new Date(item.Date) > week2){
+    if(new Date(item.Date) < week3 && new Date(item.Date) >= week2){
       var result ={
         Item : item.Item,
         TotalCost : item.TotalCost
       }
       weekl3Purchases.push(result)
     }
-    if(new Date(item.Date) > week3){
+    if(new Date(item.Date) >= week3){
       var result ={
         Item : item.Item,
         TotalCost : item.TotalCost
@@ -79,4 +79,4 @@ console.log(weekl3Purchases)
 console.log("\nWeek 4 -- > \n");
 console.log(weekl4Purchases)
 
-// console.log(weekl1Purchases.length + weekl2Purchases.length + weekl3Purchases.length + weekl4Purchases.length);
+console.log(weekl1Purchases.length + weekl2Purchases.length + weekl3Purchases.length + weekl4Purchases.length);
