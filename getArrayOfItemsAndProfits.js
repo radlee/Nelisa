@@ -1,11 +1,11 @@
 module.exports = function(array1, array2){
   var theList = [];
-  array1.forEach(function(item){
-    array2.forEach(function(item2){
-      if(item.Item === item2.Item){
-        var profit = parseFloat(item.Sales) - parseFloat(item2.TotalCost);
+  array1.forEach(function(object1){
+    array2.forEach(function(object2){
+      if(object1.Item === object2.Item){
+        var profit = parseFloat(object1.Sales) - parseFloat(object2.TotalCost);
         var result = {
-          Item : item.Item,
+          Item : object1.Item,
           Profit : profit
         }
         theList.push(result);
@@ -16,8 +16,8 @@ module.exports = function(array1, array2){
   var sortTheArray = function(list){
     list.sort(function(obj1, obj2){
       return obj1.Profit - obj2.Profit;
-    });
+    })
   }
   sortTheArray(theList)
-  return "The Most Profitable Product is " + theList[theList.length-1].Item
+  return theList;
 }

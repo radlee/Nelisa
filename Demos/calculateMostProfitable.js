@@ -1,4 +1,36 @@
-module.exports = function(theList){
+var getSales = require("../getSales");
+var getCosts = require("../getCosts");
+var objArray = getCosts("files/purchases.csv");
+console.log("Purchases Costs -- >")
+console.log(objArray);
+var objArray2 = getSales("files/week1.csv");
+console.log("Weekly Sales -- >")
+console.log(objArray2);
+
+var calculate = function(array1, array2){
+  var theList = [];
+  array1.forEach(function(item){
+    array2.forEach(function(item2){
+      if(item.Item === item2.Item){
+        var profit = parseFloat(item2.Sales) - parseFloat(item.TotalCost);
+        var result = {
+          Item : item.Item,
+          Profit : profit
+        }
+        theList.push(result);
+      }
+    })
+  })
+  console.log("\n< -- Profits -- >")
+
+  var sortTheArray = function(list){
+    list.sort(function(obj1, obj2){
+      return obj1.Profit - obj2.Profit;
+    })
+  }
+  sortTheArray(theList)
+  console.log(theList)
+
   var categories = [];
   var totalFruits = 0;
   var totalCandy =0;
@@ -65,8 +97,7 @@ module.exports = function(theList){
     if(item.Item == "Shampoo 1 litre"){
       totalBeauty += item.Profit
     }
-  });
-
+  })
   var fuit = {Category : "Fruit", Profit : totalFruits};
   categories.push(fuit);
   var candy = {Category : "Candy", Profit : totalCandy}
@@ -93,5 +124,10 @@ module.exports = function(theList){
   }
   sortTheArray(categories);
 
-  return "The Most Profitable Category is " + categories[categories.length-1].Category;
+  console.log("Catergories -- >");
+  console.log(categories);
+  // return "The Least porpular Category is " + categories[0].Category;
+  console.log("The Most Profitable Category is " + categories[categories.length-1].Category);
 }
+
+calculate(objArray, objArray2);

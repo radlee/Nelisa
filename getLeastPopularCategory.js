@@ -32,7 +32,7 @@ module.exports = function(listOfItems){
     if(item.Item == "Cream Soda 500ml"){
       totalCoolDrinks += item.NumberSold
     }
-    if(item.Item == "Imasi"){
+    if(item.Item == "Amasi"){
       totalDairy += item.NumberSold
     }
     if(item.Item == "Milk 1l"){

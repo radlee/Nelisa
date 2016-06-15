@@ -17,7 +17,7 @@ var readAndMakeObject = function(file){
   });
   return listOfObjs;
 }
-var objArray = readAndMakeObject("files/week2.csv");
+var objArray = readAndMakeObject("../files/week1.csv");
 
 //Merge the same products, multiply and add -------
 
@@ -51,4 +51,5 @@ var getMostSellingProduct = function (listOfObjs){
 
 var listOfItems = getMostSellingProduct(objArray);
 
+console.log("\nTotal Sales in Week 1 -- >  [CORRECT SUMS OF SALES FOR WEEK1]\n")
 console.log(listOfItems);

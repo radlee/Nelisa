@@ -20,7 +20,7 @@ var readAndMakeObject = function(file){
   console.log(listOfObjs);
   return listOfObjs;
 }
-var objArray = readAndMakeObject("files/week2.csv");
+var objArray = readAndMakeObject("../files/week4.csv");
 
 //Combine all same Items and make total items sold that week--------------
 
