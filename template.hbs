@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<title>Nelisa's Weekly Sales</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+  <h1 id="heading">Nelisa</h1>
+
+  <div id = "output">
+    <h1 id="heading2">Week 1 Sales Statistics</h1>
+    <div>
+      <table style="width:100%" class="highlight">
+        <tr>
+          <th>Description</th>
+          <th>Product</th>
+          <th>Quantity</th>
+        </tr>
+        <tr>
+          {{#key}}<td class="para">The {{Description}}</td>
+          <td class="para"><strong><span style="color:green">{{Item}} {{Category}}</span></strong></td>
+          <td class="para">{{Quantity}} {{Profit}}</td>
+        </tr>{{/key}}
+      </table>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script src="handlebars.js"></script>
+<!-- <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script> -->
+<!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+</body>
+</html>

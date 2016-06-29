@@ -63,29 +63,28 @@ module.exports = function(file){
         }
     })
     //Merge same Item names, Add totals and Sort the Array ---
-    var totalSales = [];
-    var totalSalesObjs = {};
+    var totalCost = [];
+    var totalCostObjs = {};
     weekl1Purchases.forEach(function(item){
       var Item = item.Item;
       var Price = item.TotalCost;
-      if(totalSalesObjs[Item] == undefined){
-        totalSalesObjs[Item] = 0;
+      if(totalCostObjs[Item] == undefined){
+        totalCostObjs[Item] = 0;
       }
-      totalSalesObjs[Item] = totalSalesObjs[Item] + Price;
+      totalCostObjs[Item] = totalCostObjs[Item] + Price;
     })
-    for(var key in totalSalesObjs){
+    for(var key in totalCostObjs){
       var result = {
         Item : key,
-        TotalCost : totalSalesObjs[key]
+        TotalCost : totalCostObjs[key]
       }
-      totalSales.push(result);
+      totalCost.push(result);
     }
     var sortTheArray = function(list){
       list.sort(function(obj1, obj2){
         return obj1.TotalCost - obj2.TotalCost;
       })
     }
-    sortTheArray(totalSales)
-
-    return totalSales;
+    sortTheArray(totalCost)
+    return totalCost;
 }

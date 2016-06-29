@@ -3,7 +3,7 @@ module.exports = function (listOfObjs){
   var totalObjs = {};
   listOfObjs.forEach(function(item){
     var Item = item.Item;
-    var number = item.NumberSold;
+    var number = item.Quantity;
     if(totalObjs[Item] == undefined){
       totalObjs[Item] = 0;
     }
@@ -11,16 +11,17 @@ module.exports = function (listOfObjs){
   })
   for(var key in totalObjs){
     var result = {
+      Description : "Most Popular Product",
       Item : key,
-      NumberSold : totalObjs[key]
+      Quantity : totalObjs[key]
     }
     totalProducts.push(result);
   }
   var sortTheArray = function(list){
     list.sort(function(obj1, obj2){
-      return obj1.NumberSold - obj2.NumberSold;
+      return obj1.Quantity - obj2.Quantity;
     })
   }
   sortTheArray(totalProducts)
-  return "Most Popular Product is " + totalProducts[totalProducts.length-1].Item;
+  return totalProducts[totalProducts.length-1];
 }

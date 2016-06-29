@@ -66,32 +66,29 @@ module.exports = function(theList){
       totalBeauty += item.Profit
     }
   });
-
-  var fuit = {Category : "Fruit", Profit : totalFruits};
+  var fuit = {Description : "Most Profitable Category", Category : "Fruit", Profit : totalFruits};
   categories.push(fuit);
-  var candy = {Category : "Candy", Profit : totalCandy}
+  var candy = {Description : "Most Profitable Category", Category : "Candy", Profit : totalCandy}
   categories.push(candy);
-  var drink = {Category : "CoolDrink", Profit : totalCoolDrinks}
+  var drink = {Description : "Most Profitable Category", Category : "Cool Drink", Profit : totalCoolDrinks}
   categories.push(drink);
-  var dairy = {Category : "Dairy", Profit : totalDairy}
+  var dairy = {Description : "Most Profitable Category", Category : "Dairy", Profit : totalDairy}
   categories.push(dairy);
-  var can = {Category : "Canned", Profit : totalCanned}
+  var can = {Description : "Most Profitable Category", Category : "Canned", Profit : totalCanned}
   categories.push(can);
-  var gift = {Category : "Gifts", Profit : totalGifts}
+  var gift = {Description : "Most Profitable Category", Category : "Gifts", Profit : totalGifts}
   categories.push(gift);
-  var food = {Category : "Food", Profit : totalFood}
+  var food = {Description : "Most Profitable Category", Category : "Food", Profit : totalFood}
   categories.push(food);
-  var bakery = {Category : "Bakery", Profit : totalBakery}
+  var bakery = {Description : "Most Profitable Category", Category : "Bakery", Profit : totalBakery}
   categories.push(bakery);
-  var beauty = {Category : "Beauty", Profit : totalBeauty}
+  var beauty = {Description : "Most Profitable Category", Category : "Beauty", Profit : totalBeauty}
   categories.push(beauty);
-
   var sortTheArray = function(list){
     list.sort(function(obj1, obj2){
       return obj1.Profit - obj2.Profit;
     })
   }
   sortTheArray(categories);
-
-  return "The Most Profitable Category is " + categories[categories.length-1].Category;
+  return categories[categories.length-1];
 }

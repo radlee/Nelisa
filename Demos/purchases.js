@@ -1,4 +1,5 @@
-
+//Demo file to read the Purchases file and Returns an array of Objects
+//ItemName and the totalCost for the week..
 var readAndMakeObject = function(file){
   var fs = require('fs');
   var data = fs.readFileSync(file, 'utf8');

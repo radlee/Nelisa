@@ -1,3 +1,4 @@
+//Reads the purchases.csv file and returns weekly purchases from week1 to week4
 var readAndMakeObject = function(file){
   var fs = require('fs');
   var data = fs.readFileSync(file, 'utf8');
@@ -24,11 +25,8 @@ var readAndMakeObject = function(file){
   })
   var objArray = listOfObjs;
   return listOfObjs;
-
 }
 var objArray = readAndMakeObject("files/purchases.csv");
-
-// console.log(objArray)
 
 var weekl1Purchases = [];
 var weekl2Purchases = [];

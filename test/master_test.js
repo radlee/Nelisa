@@ -22,27 +22,27 @@ var objArray2 = getCosts("./files/purchases.csv");
 var arrayOfProfits = getArrayOfItemsAndProfits(objArray1, objArray2);
 
 
-var listOfObjects = readAndMakeObjects("files/week1.csv");
+var listOfObjects = readAndMakeObjects("files/week1.csv", "files");
 
-describe("\nProcessing Nelisa's Data -- |\n", function(){
+describe("\n<--| Processing Nelisa's Data |-->\n", function(){
   it("should return the Most popular product sold each week", function(){
-    assert.equal(getMostPopularProduct(listOfObjects), "Most Popular Product is Coke 500ml" );
+    assert.deepEqual(getMostPopularProduct(listOfObjects), {Description: 'Most Popular Product', Item: 'Coke 500ml', Quantity: 54 } );
   });
   it("should return the Least popular product sold each week", function(){
-    assert.equal(getLeastPopularProduct(listOfObjects), "Least Popular Product is Shampoo 1 litre" );
+    assert.deepEqual(getLeastPopularProduct(listOfObjects), {Description: 'Least Popular Product', Item: 'Shampoo 1 litre', Quantity: 3 });
   });
   //Category ---------------------------------------------------------------
   it("should return the Most porpular Category sold each week", function(){
-    assert.equal(getMostPopularCategory(listOfObjects), "The Most porpular Category is CoolDrink");
+    assert.deepEqual(getMostPopularCategory(listOfObjects), {Description: 'Most Popular Category', Category: 'Cool Drink', Quantity: 109 });
   });
   it("should return the Least porpular Category sold each week", function(){
-    assert.equal(getLeastPopularCategory(listOfObjects), "The Least porpular Category is Gifts");
+    assert.deepEqual(getLeastPopularCategory(listOfObjects), {Description: 'Least Popular Category', Category: 'Gifts', Quantity: 0 });
   });
   //Profitability-----------------------------------------------------------------
   it("should return the Most Profitable Product sold each week", function(){
-    assert.equal(getMostProfitableProduct(objArray1, objArray2), "The Most Profitable Product is Iwisa Pap 5kg");
+    assert.deepEqual(getMostProfitableProduct(objArray1, objArray2), {Description: 'Most Profitable Product',Item: 'Iwisa Pap 5kg', Profit: 410 });
   });
   it("should return the Most Profitable Category sold each week", function(){
-    assert.equal(getMostProfitableCategory(arrayOfProfits), "The Most Profitable Category is Food");
+    assert.deepEqual(getMostProfitableCategory(arrayOfProfits), {Description: 'Most Profitable Category', Category: 'Food', Profit: 594 });
   });
 });

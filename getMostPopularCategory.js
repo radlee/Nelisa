@@ -12,84 +12,84 @@ module.exports = function(listOfItems){
   //Categorizing--------------------
   listOfItems.forEach(function(item){
     if(item.Item == "Bananas - loose"){
-      totalFruits += item.NumberSold
+      totalFruits += item.Quantity
     }
     if(item.Item == "Apples - loose"){
-      totalFruits += item.NumberSold
+      totalFruits += item.Quantity
     }
     if(item.Item == "Mixed Sweets 5s"){
-      totalCandy += item.NumberSold
+      totalCandy += item.Quantity
     }
     if(item.Item == "Heart Chocolates"){
-      totalCandy += item.NumberSold
+      totalCandy += item.Quantity
     }
     if(item.Item == "Coke 500ml"){
-      totalCoolDrinks += item.NumberSold
+      totalCoolDrinks += item.Quantity
     }
     if(item.Item == "Fanta 500ml"){
-      totalCoolDrinks += item.NumberSold
+      totalCoolDrinks += item.Quantity
     }
     if(item.Item == "Cream Soda 500ml"){
-      totalCoolDrinks += item.NumberSold
+      totalCoolDrinks += item.Quantity
     }
     if(item.Item == "Amasi"){
-      totalDairy += item.NumberSold
+      totalDairy += item.Quantity
     }
     if(item.Item == "Milk 1l"){
-      totalDairy += item.NumberSold
+      totalDairy += item.Quantity
     }
     if(item.Item == "Gold Dish Vegetable Curry Can"){
-      totalCanned += item.NumberSold
+      totalCanned += item.Quantity
     }
     if(item.Item == "Chakalaka Can"){
-      totalCanned += item.NumberSold
+      totalCanned += item.Quantity
     }
     if(item.Item == "Valentine Cards"){
-      totalGifts += item.NumberSold
+      totalGifts += item.Quantity
     }
     if(item.Item == "Rose (plastic)"){
-      totalGifts += item.NumberSold
+      totalGifts += item.Quantity
     }
     if(item.Item == "Iwisa Pap 5kg"){
-      totalFood += item.NumberSold
+      totalFood += item.Quantity
     }
     if(item.Item == "Top Class Soy Mince"){
-      totalFood += item.NumberSold
+      totalFood += item.Quantity
     }
     if(item.Item == "Bread"){
-      totalBakery += item.NumberSold
+      totalBakery += item.Quantity
     }
     if(item.Item == "Soap Bar"){
-      totalBeauty += item.NumberSold
+      totalBeauty += item.Quantity
     }
     if(item.Item == "Shampoo 1 litre"){
-      totalBeauty += item.NumberSold
+      totalBeauty += item.Quantity
     }
   })
-  var fuit = {Category : "Fruit", NumberSold : totalFruits};
-  categories.push(fuit);
-  var candy = {Category : "Candy", NumberSold : totalCandy}
-  categories.push(candy);
-  var drink = {Category : "CoolDrink", NumberSold : totalCoolDrinks}
-  categories.push(drink);
-  var dairy = {Category : "Dairy", NumberSold : totalDairy}
-  categories.push(dairy);
-  var can = {Category : "Canned", NumberSold : totalCanned}
-  categories.push(can);
-  var gift = {Category : "Gifts", NumberSold : totalGifts}
-  categories.push(gift);
-  var food = {Category : "Food", NumberSold : totalFood}
-  categories.push(food);
-  var bakery = {Category : "Bakery", NumberSold : totalBakery}
-  categories.push(bakery);
-  var beauty = {Category : "Beauty", NumberSold : totalBeauty}
-  categories.push(beauty);
 
+  var fuit = {Description : "Most Popular Category", Category : "Fruit", Quantity : totalFruits}
+  categories.push(fuit);
+  var candy = {Description : "Most Popular Category", Category : "Candy", Quantity : totalCandy}
+  categories.push(candy);
+  var drink = {Description : "Most Popular Category", Category : "Cool Drink", Quantity : totalCoolDrinks}
+  categories.push(drink);
+  var dairy = {Description : "Most Popular Category", Category : "Dairy", Quantity : totalDairy}
+  categories.push(dairy);
+  var can = {Description : "Most Popular Category", Category : "Canned", Quantity : totalCanned}
+  categories.push(can);
+  var gift = {Description : "Most Popular Category", Category : "Gifts", Quantity : totalGifts}
+  categories.push(gift);
+  var food = {Description : "Most Popular Category", Category : "Food", Quantity : totalFood}
+  categories.push(food);
+  var bakery = {Description : "Most Popular Category", Category : "Bakery", Quantity : totalBakery}
+  categories.push(bakery);
+  var beauty = {Description : "Most Popular Category", Category : "Beauty", Quantity : totalBeauty}
+  categories.push(beauty);
   var sortTheArray = function(list){
     list.sort(function(obj1, obj2){
-      return obj1.NumberSold - obj2.NumberSold;
+      return obj1.Quantity - obj2.Quantity;
     })
   }
   sortTheArray(categories)
-  return "The Most porpular Category is " + categories[categories.length-1].Category;
+  return categories[categories.length-1];
 }
