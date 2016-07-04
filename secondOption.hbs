@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<title>Nelisa's Weekly Sales</title>
+<link rel="shortcut icon" href="https://raw.githubusercontent.com/radlee/Nelisa/80cd8da7f3de73d16d5bf8a99e2c2ffad05da188/img/NS.jpg" />
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="/home/lee/projects/Nelisa/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/home/lee/projects/Nelisa/bootstrap/dist/css/bootstrap-theme.min.css">
+<script src="/home/lee/projects/Nelisa/jquery/dist/jquery.min.js"></script>
+<script src="/home/lee/projects/Nelisa/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div id="container">
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Nelisa</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Manage Account</a></li>
+        <li><a href="#">Shop Online</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="csricodexmlab" class="container-fluid bg-3 text-center jumbotron">
+  <h1 class="margin">Weekly Sales Statistics</h1>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+
+    </div>
+    <div class="col-sm-4">
+
+    </div>
+    <div class="col-sm-4">
+
+    </div>
+  </div>
+</div>
+
+
+
+  <div id = "output">
+    <!-- <h1 id="heading2">Week 1 Sales Statistics</h1> -->
+    <div>
+      <table style="width:100%" class="table table-hover">
+        {{#key}}<tr>
+          <th class="info">{{Description}}</th>
+          <th class="info">Quantity</th>
+        </tr>
+        <tr >
+          <td class="para"><strong><span style="color:green">{{Item}} {{Category}}</span></strong></td>
+          <td class="para">{{Quantity}} {{Profit}}</td>
+        </tr>{{/key}}
+      </table>
+    </div>
+</div>
+</div>
+
+<script src="app.js"></script>
+<script src="handlebars.js"></script>
+<!-- <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script> -->
+<!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script> -->
+
+</body>
+</html>

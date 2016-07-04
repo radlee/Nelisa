@@ -1,7 +1,7 @@
 module.exports = function(file, path){
   var fs = require('fs');
   var data = fs.readFileSync(file, 'utf8');
-  var fileNames = fs.readdirSync(path);
+  // var fileNames = fs.readdirSync(path);
   var listOfSplittedLines = data.split("\n").splice(1).filter(Boolean);
   var list =[];
   var listOfObjs = [];

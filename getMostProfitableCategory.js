@@ -12,7 +12,7 @@ module.exports = function(theList){
   //Categorizing-------------------------
   theList.forEach(function(item){
     if(item.Item == "Bananas - loose"){
-      totalFruits += item.Profit
+      totalFruits += parseFloat(item.Profit)
     }
     if(item.Item == "Apples - loose"){
       totalFruits += item.Profit
@@ -33,10 +33,10 @@ module.exports = function(theList){
       totalCoolDrinks += item.Profit
     }
     if(item.Item == "Amasi"){
-      totalDairy += item.Profit
+      totalDairy += parseFloat(item.Profit)
     }
     if(item.Item == "Milk 1l"){
-      totalDairy += item.Profit
+      totalDairy += parseFloat(item.Profit)
     }
     if(item.Item == "Gold Dish Vegetable Curry Can"){
       totalCanned += item.Profit
@@ -66,23 +66,23 @@ module.exports = function(theList){
       totalBeauty += item.Profit
     }
   });
-  var fuit = {Description : "Most Profitable Category", Category : "Fruit", Profit : totalFruits};
+  var fuit = {Description : "Most Profitable Category", Category : "Fruit", Profit : totalFruits.toFixed(2)};
   categories.push(fuit);
-  var candy = {Description : "Most Profitable Category", Category : "Candy", Profit : totalCandy}
+  var candy = {Description : "Most Profitable Category", Category : "Candy", Profit : totalCandy.toFixed(2)}
   categories.push(candy);
-  var drink = {Description : "Most Profitable Category", Category : "Cool Drink", Profit : totalCoolDrinks}
+  var drink = {Description : "Most Profitable Category", Category : "Cool Drink", Profit : totalCoolDrinks.toFixed(2)}
   categories.push(drink);
-  var dairy = {Description : "Most Profitable Category", Category : "Dairy", Profit : totalDairy}
+  var dairy = {Description : "Most Profitable Category", Category : "Dairy", Profit : totalDairy.toFixed(2)}
   categories.push(dairy);
-  var can = {Description : "Most Profitable Category", Category : "Canned", Profit : totalCanned}
+  var can = {Description : "Most Profitable Category", Category : "Canned", Profit : totalCanned.toFixed(2)}
   categories.push(can);
-  var gift = {Description : "Most Profitable Category", Category : "Gifts", Profit : totalGifts}
+  var gift = {Description : "Most Profitable Category", Category : "Gifts", Profit : totalGifts.toFixed(2)}
   categories.push(gift);
-  var food = {Description : "Most Profitable Category", Category : "Food", Profit : totalFood}
+  var food = {Description : "Most Profitable Category", Category : "Food", Profit : totalFood.toFixed(2)}
   categories.push(food);
-  var bakery = {Description : "Most Profitable Category", Category : "Bakery", Profit : totalBakery}
+  var bakery = {Description : "Most Profitable Category", Category : "Bakery", Profit : totalBakery.toFixed(2)}
   categories.push(bakery);
-  var beauty = {Description : "Most Profitable Category", Category : "Beauty", Profit : totalBeauty}
+  var beauty = {Description : "Most Profitable Category", Category : "Beauty", Profit : totalBeauty.toFixed(2)}
   categories.push(beauty);
   var sortTheArray = function(list){
     list.sort(function(obj1, obj2){

@@ -3,52 +3,103 @@
 <head>
   <meta charset="utf-8">
 <title>Nelisa's Weekly Sales</title>
+<link rel="shortcut icon" href="https://raw.githubusercontent.com/radlee/Nelisa/80cd8da7f3de73d16d5bf8a99e2c2ffad05da188/img/NS.jpg" />
+
 <link rel="stylesheet" type="text/css" href="styles.css">
-<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="/home/lee/projects/Nelisa/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/home/lee/projects/Nelisa/bootstrap/dist/css/bootstrap-theme.min.css">
+<script src="/home/lee/projects/Nelisa/jquery/dist/jquery.min.js"></script>
+<script src="/home/lee/projects/Nelisa/bootstrap/dist/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-  <h1 id="heading">Nelisa</h1>
+
+<div id="container">
+  <!-- class="navbar navbar-inverse [ navbar-fixed-top ]" -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Nelisa</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Manage Account</a></li>
+        <li><a href="#">Shop Online</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="csricodexmlab" class="container-fluid bg-3 text-center jumbotron">
+  <h1 class="margin">Weekly Sales Statistics</h1>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+
+    </div>
+    <div class="col-sm-4">
+
+    </div>
+    <div class="col-sm-4">
+
+    </div>
+  </div>
+</div>
+
+
 
   <div id = "output">
-    <h1 id="heading2">Week 1 Sales Statistics</h1>
+    <!-- <h1 id="heading2">Week 1 Sales Statistics</h1> -->
     <div>
-      <table style="width:100%" class="highlight">
+      <table style="width:100%" class="table table-hover">
         <tr>
-          <th>Description</th>
-          <th>Product</th>
-          <th>Quantity</th>
-        </tr>
-        <tr>
-          <td class="para">The Most Popular Product</td>
-          <td class="para"><strong><span style="color:green">Coke 500ml </span></strong></td>
+          <th class="info">Most Popular Product</th>
+          <td class="para"><strong><span style="color:#00adc8">Coke 500ml </span></strong></td>
+          <th class="info">Quantity</th>
           <td class="para">54 </td>
-        </tr><td class="para">The Least Popular Product</td>
-          <td class="para"><strong><span style="color:green">Shampoo 1 litre </span></strong></td>
+        </tr><th class="info">Least Popular Product</th>
+          <td class="para"><strong><span style="color:#00adc8">Shampoo 1 litre </span></strong></td>
+          <th class="info">Quantity</th>
           <td class="para">3 </td>
-        </tr><td class="para">The Most Popular Category</td>
-          <td class="para"><strong><span style="color:green"> Cool Drink</span></strong></td>
+        </tr><th class="info">Most Popular Category</th>
+          <td class="para"><strong><span style="color:#00adc8"> Cool Drink</span></strong></td>
+          <th class="info">Quantity</th>
           <td class="para">109 </td>
-        </tr><td class="para">The Least Popular Category</td>
-          <td class="para"><strong><span style="color:green"> Gifts</span></strong></td>
+        </tr><th class="info">Least Popular Category</th>
+          <td class="para"><strong><span style="color:#00adc8"> Gifts</span></strong></td>
+          <th class="info">Quantity</th>
           <td class="para">0 </td>
-        </tr><td class="para">The Most Profitable Product</td>
-          <td class="para"><strong><span style="color:green">Amasi </span></strong></td>
-          <td class="para"> 379</td>
-        </tr><td class="para">The Most Profitable Category</td>
-          <td class="para"><strong><span style="color:green"> Dairy</span></strong></td>
-          <td class="para"> 589</td>
+        </tr><th class="info">Most Profitable Product</th>
+          <td class="para"><strong><span style="color:#00adc8">Milk 1l </span></strong></td>
+          <th class="info"><span style="color:#059407">Profit</span></th>
+          <td class="para"> 210.00</td>
+        </tr><th class="info">Most Profitable Category</th>
+          <td class="para"><strong><span style="color:#00adc8"> Dairy</span></strong></td>
+          <th class="info"><span style="color:#059407">Profit</span></th>
+          <td class="para"> 314.00</td>
         </tr>
       </table>
     </div>
+</div>
 </div>
 
 <script src="app.js"></script>
 <script src="handlebars.js"></script>
 <!-- <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script> -->
 <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script> -->
 
 </body>
 </html>

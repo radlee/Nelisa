@@ -13,7 +13,7 @@ var getArrayOfItemsAndProfits = require("./getArrayOfItemsAndProfits");
 var getSales = require("./getSales");
 var getCosts = require("./getCosts");
 // Weekly Sales and Weekly Purchases Lists Of Objects ----
-var objArray1 = getSales("./files/week2.csv");
+var objArray1 = getSales("./files/week3.csv");
 var objArray2 = getCosts("./files/purchases.csv");
 var arrayOfProfits = getArrayOfItemsAndProfits(objArray1, objArray2);
 
@@ -24,8 +24,7 @@ var leastPopularCategory = getLeastPopularCategory(listOfObjects);
 var mostProfitableProduct = getMostProfitableProduct(objArray1, objArray2);
 var mostProfitableCategory = getMostProfitableCategory(arrayOfProfits);
 
-
-var source = fs.readFileSync('./template.hbs', "utf8");
+var source = fs.readFileSync('./bootstrap.hbs', "utf8");
 
 var template = handlebars.compile(source);
 var data = { key : [mostPopularProduct, leastPopularProduct, mostPopularCategory, leastPopularCategory, mostProfitableProduct, mostProfitableCategory]};
