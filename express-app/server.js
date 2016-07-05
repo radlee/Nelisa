@@ -1,10 +1,8 @@
 var express = require('express');
-// var server = express();
+var fs = require("fs");
 var app = express();
 var exphbs = require("express-handlebars");
-
 var handlebars = require('handlebars');
-var fs = require("fs");
 var readAndMakeObjects = require("../readAndMakeObjects");
 var listOfObjects = readAndMakeObjects("../files/week2.csv");
 var getMostPopularProduct = require("../getMostPopularProduct");
