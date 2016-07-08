@@ -7,7 +7,7 @@ module.exports = function(arrayOfSales, arrayOfTotalCost){
         var result = {
           Description : "Most Profitable Product",
           Item : item1.Item,
-          Profit : profit.toFixed(2)
+          Profit : profit.toFixed(2).replace("","R")
         }
         arrayOfItemsAndProfits.push(result);
       }

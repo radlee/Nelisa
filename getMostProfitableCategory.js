@@ -66,23 +66,23 @@ module.exports = function(theList){
       totalBeauty += item.Profit
     }
   });
-  var fuit = {Description : "Most Profitable Category", Category : "Fruit", Profit : totalFruits.toFixed(2)};
+  var fuit = {Description : "Most Profitable Category", Category : "Fruit", Profit : totalFruits.toFixed(2).replace("","R")};
   categories.push(fuit);
-  var candy = {Description : "Most Profitable Category", Category : "Candy", Profit : totalCandy.toFixed(2)}
+  var candy = {Description : "Most Profitable Category", Category : "Candy", Profit : totalCandy.toFixed(2).replace("","R")}
   categories.push(candy);
-  var drink = {Description : "Most Profitable Category", Category : "Cool Drink", Profit : totalCoolDrinks.toFixed(2)}
+  var drink = {Description : "Most Profitable Category", Category : "Cool Drink", Profit : totalCoolDrinks.toFixed(2).replace("","R")}
   categories.push(drink);
-  var dairy = {Description : "Most Profitable Category", Category : "Dairy", Profit : totalDairy.toFixed(2)}
+  var dairy = {Description : "Most Profitable Category", Category : "Dairy", Profit : totalDairy.toFixed(2).replace("","R")}
   categories.push(dairy);
-  var can = {Description : "Most Profitable Category", Category : "Canned", Profit : totalCanned.toFixed(2)}
+  var can = {Description : "Most Profitable Category", Category : "Canned", Profit : totalCanned.toFixed(2).replace("","R")}
   categories.push(can);
-  var gift = {Description : "Most Profitable Category", Category : "Gifts", Profit : totalGifts.toFixed(2)}
+  var gift = {Description : "Most Profitable Category", Category : "Gifts", Profit : totalGifts.toFixed(2).replace("","R")}
   categories.push(gift);
-  var food = {Description : "Most Profitable Category", Category : "Food", Profit : totalFood.toFixed(2)}
+  var food = {Description : "Most Profitable Category", Category : "Food", Profit : totalFood.toFixed(2).replace("","R")}
   categories.push(food);
-  var bakery = {Description : "Most Profitable Category", Category : "Bakery", Profit : totalBakery.toFixed(2)}
+  var bakery = {Description : "Most Profitable Category", Category : "Bakery", Profit : totalBakery.toFixed(2).replace("","R")}
   categories.push(bakery);
-  var beauty = {Description : "Most Profitable Category", Category : "Beauty", Profit : totalBeauty.toFixed(2)}
+  var beauty = {Description : "Most Profitable Category", Category : "Beauty", Profit : totalBeauty.toFixed(2).replace("","R")}
   categories.push(beauty);
   var sortTheArray = function(list){
     list.sort(function(obj1, obj2){

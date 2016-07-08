@@ -1,0 +1,35 @@
+<style>
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300');
+
+</style>
+<div id="csricodexmlab" class="container-fluid bg-3 text-center jumbotron">
+  <h1 class="margin">Weekly Sales Statistics</h1>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+    </div>
+  </div>
+</div>
+
+<div id = "output">
+  <div>
+    <table style="width:100%" class="table table-hover">
+
+      <tr>
+        {{#key}}<th class="info">{{Description}}</th>
+        <td class="para"><strong><span style="color:#00adc8">{{Item}} {{Category}}</span></strong></td>
+        {{#if Profit}}
+        <th class="info"><span style="color:#059407">Profit</span></th>
+        {{else}}
+        <th class="info">Quantity</th>
+        {{/if}}
+        <td class="para">{{Quantity}} {{Profit}}</td>
+      </tr>{{/key}}
+    </table>
+  </div>
+</div>

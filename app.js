@@ -1,7 +1,7 @@
 var handlebars = require('handlebars');
 var fs = require("fs");
 var readAndMakeObjects = require("./readAndMakeObjects");
-var listOfObjects = readAndMakeObjects("files/week1.csv", "files");
+var listOfObjects = readAndMakeObjects("files/week3.csv", "files");
 var getMostPopularProduct = require("./getMostPopularProduct");
 var getLeastPopularProduct = require("./getLeastPopularProduct");
 var getMostPopularCategory = require("./getMostPopularCategory");

@@ -40,9 +40,9 @@ describe("\n<--| Processing Nelisa's Data |-->\n", function(){
   });
   //Profitability-----------------------------------------------------------------
   it("should return the Most Profitable Product sold each week", function(){
-    assert.deepEqual(getMostProfitableProduct(objArray1, objArray2), {Description: 'Most Profitable Product',Item: 'Iwisa Pap 5kg', Profit: 410 });
+    assert.deepEqual(getMostProfitableProduct(objArray1, objArray2), {Description: 'Most Profitable Product',Item: 'Fanta 500ml', Profit: "R90.00" });
   });
   it("should return the Most Profitable Category sold each week", function(){
-    assert.deepEqual(getMostProfitableCategory(arrayOfProfits), {Description: 'Most Profitable Category', Category: 'Food', Profit: 594 });
+    assert.deepEqual(getMostProfitableCategory(arrayOfProfits), {Description: 'Most Profitable Category', Category: 'Beauty', Profit: "R63.00" });
   });
 });
