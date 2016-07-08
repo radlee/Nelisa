@@ -32,18 +32,6 @@ var weeklyStats = function(weekPath, purchasesPath){
   return [mostPopularProduct, leastPopularProduct, mostPopularCategory, leastPopularCategory, mostProfitableProduct, mostProfitableCategory];
 }
 
-var dataWeek1 = weeklyStats("../files/week1.csv","../files/purchases.csv")
-var dataWeek2 = weeklyStats("../files/week2.csv","../files/purchases.csv")
-var dataWeek3 = weeklyStats("../files/week3.csv","../files/purchases.csv")
-var dataWeek4 = weeklyStats("../files/week4.csv","../files/purchases.csv")
-
-var weekstats = {
-  week1: dataWeek1,
-  week2: dataWeek2,
-  week3: dataWeek3,
-  week4: dataWeek4
-};
-
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 // create a route
@@ -52,7 +40,9 @@ app.get('/', function(req, res){
 });
 app.get('/sales/:week_name', function(req, res){
   var weekname = req.params.week_name;
-    res.render( "weeklyStats", {key: weekstats[weekname] });
+  var weeklyFile = "../files/"  + weekname +".csv";
+  var data = weeklyStats(weeklyFile, "../files/purchases.csv");
+    res.render( "weeklyStats", {key : data , week : weekname});
 });
 
 //start the server
